@@ -1,0 +1,21 @@
+.categoriesContainer {
+    height: 60px;
+    width: 100%;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.categorie {
+    font-size: 24px;
+    color: #555555;
+}

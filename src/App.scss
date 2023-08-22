@@ -1,0 +1,31 @@
+.pageContent {
+    width: 100%;
+    display: flex;
+    border: 1px solid red;
+    flex-direction: column;
+}
+
+.products {
+    width: 100%;
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.resultsFilters {
+    width: 100%;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+    padding: .25rem;
+}
+
+.results {
+    font-size: 14px;
+}
+
+.categorie {
+    font-size: 2rem;
+    padding: .25rem;
+    border-bottom: 2px solid #CCCCCC;
+    margin-bottom: 1rem;
+}
