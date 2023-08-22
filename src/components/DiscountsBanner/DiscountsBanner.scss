@@ -1,9 +1,11 @@
+@use '../../colors';
+
 .discountsBanner {
     width: 100%;
     height: 50px;
-    background-color: #AF0E4E;
+    background-color: colors.$fuchsia;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
+    color: colors.$white;
 }

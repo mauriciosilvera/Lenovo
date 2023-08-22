@@ -1,16 +1,18 @@
+@use '../../colors';
+
 .searchBar {
     display: flex;
     width: 80%;
     max-width: 400px;
     height: 35px;
-    border: 1px solid #000000;
+    border: 1px solid colors.$black;
     border-radius: 4px;
 }
 
 .searchIcon {
     width: 40px;
     height: 100%;
-    background-color: #000000;
+    background-color: colors.$black;
     display: flex;
     align-items: center;
     justify-content: center;

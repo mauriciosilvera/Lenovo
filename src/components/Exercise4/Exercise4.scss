@@ -1,0 +1,24 @@
+@use '../../colors';
+
+.exercise4 {
+    width: 100svw;
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        padding: 1rem;
+        border-radius: .25rem;
+        font-size: 1.25rem;
+        background-color: colors.$blue;
+        color: colors.$white;
+        border: 0;
+        cursor: pointer;
+    }
+
+    p {
+        font-size: 1.25rem;
+        margin-left: 1rem;
+    }
+}

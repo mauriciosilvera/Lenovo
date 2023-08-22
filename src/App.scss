@@ -1,7 +1,8 @@
+@use 'colors';
+
 .pageContent {
     width: 100%;
     display: flex;
-    border: 1px solid red;
     flex-direction: column;
 }
 
@@ -26,6 +27,6 @@
 .categorie {
     font-size: 2rem;
     padding: .25rem;
-    border-bottom: 2px solid #CCCCCC;
+    border-bottom: 2px solid colors.$light-gray;
     margin-bottom: 1rem;
 }

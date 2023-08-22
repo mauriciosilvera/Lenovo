@@ -1,9 +1,11 @@
+@use '../../colors';
+
 .cardContainer {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #BCBCBC;
+    border: 1px solid colors.$gray;
     border-radius: 4px;
     margin: 0 8px 0 4px;
     justify-content: center;
@@ -20,7 +22,7 @@
 }
 
 .productTitle {
-    color: #0D5C91;
+    color: colors.$blue;
     margin-bottom: 2rem;
 }
 
@@ -37,7 +39,7 @@
     border-radius: .25rem;
     padding: 1rem;
     margin-top: 1rem;
-    background-color: #0D5C91;
-    color: #FFFFFF;
+    background-color: colors.$blue;
+    color: colors.$white;
     border: 0;
 }
