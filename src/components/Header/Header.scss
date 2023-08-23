@@ -10,13 +10,39 @@ header {
     display: flex;
     justify-content: space-between;
     height: 40px;
+
+    .topHeaderIcons {
+        display: flex;
+        flex-wrap: wrap;
+        text-decoration: none;
+        list-style: none;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .icon {
+        padding: .75rem;
+    }
 }
 
-.middle {
+.burgerAndSearch {
     width: 100%;
     height: 40px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    button {
+        max-height: 40px;
+        border: 0;
+        margin-left: .25rem;
+        border-radius: .25rem;
+
+        .burgerIcon {
+            text-align: center;
+            max-height: 40px;
+        }
+    }
 }
 
 .bottom {
@@ -27,31 +53,36 @@ header {
     align-items: center;
     background-color: colors.$extra-light-gray;
     display: none;
+
+    .subsections {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        text-decoration: none;
+        list-style: none;
+        align-items: center;
+        justify-content: space-around;
+
+        .subsection {
+            font-size: 13px;
+        }
+        
+    }
 }
 
-.topHeaderIcons {
-    display: flex;
-    flex-wrap: wrap;
-    text-decoration: none;
-    list-style: none;
-    align-items: center;
-    justify-content: space-around;
+.burgerOptions {
+    position: absolute;
+    width: 100%;
+
+    .option {
+        position: relative;
+        background-color: colors.$black;
+        color: colors.$white;
+        border-bottom: 1px solid colors.$white;
+        padding: .75rem;
+    }
 }
 
-.icon {
-    padding: .75rem;
-}
-
-.subsections {
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    text-decoration: none;
-    list-style: none;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.subsection {
-    font-size: 13px;
+.hidden {
+    visibility: hidden;
 }

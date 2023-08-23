@@ -8,4 +8,9 @@
     height: 76px;
     background-color: colors.$fuchsia;
     color: colors.$white;
+
+    p {
+        font-size: .75rem;
+        text-align: center;
+    }
 }

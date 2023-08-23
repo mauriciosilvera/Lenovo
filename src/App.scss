@@ -4,29 +4,50 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-}
+    align-items: center;
 
-.products {
-    width: 100%;
-    display: flex;
-    margin-bottom: 2rem;
-}
+    
+    .categorie {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: .25rem;
+        border-bottom: 2px solid colors.$light-gray;
+        margin-bottom: 1rem;
+    }
 
-.resultsFilters {
-    width: 100%;
-    border: 1px solid blue;
-    display: flex;
-    justify-content: space-between;
-    padding: .25rem;
-}
+    .resultsFilters {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    
+        .results {
+            font-size: 14px;
+            margin-bottom: .25rem;
+        }
+    
+        .filters {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        
+            .filter {
+                width: 45%;
+                padding: .5rem;
+                border: 1px solid colors.$gray;
+                border-radius: .25rem;
+            }
+        }
+        
+    }
 
-.results {
-    font-size: 14px;
-}
-
-.categorie {
-    font-size: 2rem;
-    padding: .25rem;
-    border-bottom: 2px solid colors.$light-gray;
-    margin-bottom: 1rem;
+    .products {
+        width: 100%;
+        display: flex;
+        margin-bottom: 1rem;
+    }    
 }

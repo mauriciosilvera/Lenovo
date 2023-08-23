@@ -31,6 +31,27 @@ const topHeaderIcons = [
   },
 ];
 
+const middleHeaderOptions = [{
+  id: 1,
+  text: 'PCS & TABLETS',
+},
+{
+  id: 2,
+  text: 'PHONES & SMART DEVICES',
+},
+{
+  id: 3,
+  text: 'DATA CENTER',
+},
+{
+  id: 4,
+  text: 'SERVICES & SOLUTIONS',
+},
+{
+  id: 5,
+  text: 'SUPPORT',
+}];
+
 const bottomHeaderOptions = [
   {
     id: 1,
@@ -109,4 +130,52 @@ const categoriesOptions = [
   },
 ];
 
-export { topHeaderIcons, bottomHeaderOptions, categoriesOptions };
+const orderFilters = [
+  {
+    id: 1,
+    label: 'Price Low to High',
+    value: 'asc',
+  },
+  {
+    id: 2,
+    label: 'Price High to Low',
+    value: 'desc',
+  },
+  {
+    id: 3,
+    label: 'Best selling',
+    value: 'top',
+  },
+  {
+    id: 4,
+    label: 'Newest',
+    value: 'newest',
+  },
+];
+
+const priceFilters = [
+  {
+    id: 1,
+    label: '$800-$999.99',
+    value: '800/999',
+  },
+  {
+    id: 2,
+    label: '$1,000-$1,499.99',
+    value: '1000/1499',
+  },
+  {
+    id: 3,
+    label: '$1,400-$1,999.99',
+    value: '1500/2000',
+  },
+  {
+    id: 4,
+    label: '$2,000-$2,499.99',
+    value: '2000/2499',
+  },
+];
+
+export {
+  topHeaderIcons, bottomHeaderOptions, categoriesOptions, middleHeaderOptions, orderFilters, priceFilters,
+};

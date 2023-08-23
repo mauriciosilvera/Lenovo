@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.scss';
-import { topHeaderIcons, bottomHeaderOptions } from '../../constants/constants';
+import { topHeaderIcons, middleHeaderOptions } from '../../constants/constants';
 import SearchBar from '../SearchBar/SearchBar';
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenCloseMenu = () => {
+    setIsOpen((prevValue) => !prevValue);
+  };
+
   return (
     <header className="header">
       <section className="top">
@@ -16,17 +22,33 @@ export default function Header() {
           ))}
         </ul>
       </section>
-      <section className="middle">
-        <img src="./burger-menu.svg" alt="menu" />
+      <section className="burgerAndSearch">
+        <button
+          type="button"
+          onClick={handleOpenCloseMenu}
+          onKeyDown={handleOpenCloseMenu}
+        >
+          <img
+            className="burgerIcon"
+            src="./burger-menu.svg"
+            alt="menu"
+          />
+        </button>
         <SearchBar />
       </section>
-      <section className="bottom">
+      <ul className={`burgerOptions ${isOpen ? '' : 'hidden'}`}>
+        {middleHeaderOptions.map((opt) => (
+          <li className="option lato-bold" key={opt.id}>{opt.text}</li>
+        ))}
+      </ul>
+      {/* <section className="bottom">
         <ul className="subsections">
           {bottomHeaderOptions.map((opt) => (
             <li key={opt.id} className="subsection">{opt.text}</li>
           ))}
         </ul>
-      </section>
+      </section> */}
+
     </header>
   );
 }
