@@ -3,9 +3,9 @@ import './App.scss';
 import Header from './components/Header/Header';
 import DiscountsBanner from './components/DiscountsBanner/DiscountsBanner';
 // import Categories from './components/Categories/Categories';
-import ItemCard from './components/ProductCard/ProductCard';
+import ProductCard from './components/ProductCard/ProductCard';
 import MerchBanner from './components/MerchBanner/MerchBanner';
-import { orderFilters, priceFilters } from './constants/constants';
+import { orderFilters, priceFilters, products } from './constants/constants';
 
 function App() {
   return (
@@ -32,8 +32,15 @@ function App() {
           </div>
         </div>
         <div className="products">
-          <ItemCard />
-          <ItemCard />
+          {products.map((product) => (
+            <ProductCard
+              img={product.img}
+              name={product.name}
+              price={product.price}
+              coupon={product.coupon}
+              isDoorbuster={product.isDoorbuster}
+            />
+          ))}
         </div>
         <MerchBanner />
       </section>
