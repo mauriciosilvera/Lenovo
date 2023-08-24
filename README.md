@@ -6,7 +6,7 @@ This project was initializated with create-react-app + Vite, and I use Sass for 
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
