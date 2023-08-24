@@ -2,7 +2,7 @@
 
 Hi Lenovo people! I'm Mauricio and this is my responsive Lenovo landing page.
 
-This project was initializated with create-react-app + Vite. This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was initializated with create-react-app + Vite, and I use Sass for css.
 
 ## Getting Started
 
