@@ -158,21 +158,19 @@ const priceFilters = [
     id: 1,
     label: '$800-$999.99',
     value: '800/999',
+    remaining: 2,
   },
   {
     id: 2,
     label: '$1,000-$1,499.99',
     value: '1000/1499',
+    remaining: 4,
   },
   {
     id: 3,
     label: '$1,400-$1,999.99',
     value: '1500/2000',
-  },
-  {
-    id: 4,
-    label: '$2,000-$2,499.99',
-    value: '2000/2499',
+    remaining: 3,
   },
 ];
 
@@ -203,22 +201,6 @@ const products = [
   },
   {
     id: 4,
-    name: 'ThinkPad X1 Carbon Gen 8',
-    price: '$1,299.99',
-    coupon: 'YOGAPRESALE8',
-    img: './notebook2.png',
-    isDoorbuster: true,
-  },
-  {
-    id: 5,
-    name: 'ThinkPad X1 Carbon Gen 8',
-    price: '$1,299.99',
-    coupon: 'YOGAPRESALE8',
-    img: './notebook1.png',
-    isDoorbuster: false,
-  },
-  {
-    id: 6,
     name: 'ThinkPad X1 Carbon Gen 8',
     price: '$1,299.99',
     coupon: 'YOGAPRESALE8',

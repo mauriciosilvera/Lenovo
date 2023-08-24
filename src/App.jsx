@@ -14,46 +14,76 @@ function App() {
       <DiscountsBanner />
       <Categories />
       <section className="pageContent">
-        <div className="categorieName">
+        <div className="sectionName">
           <span>Models</span>
         </div>
-        <div className="resultsFilters">
-          <p className="results">8 Matching results</p>
-          <div className="filters">
-            <select className="filter" name="order">
-              {orderFilters.map((filter) => (
-                <option
-                  key={filter.id}
-                  value={filter.value}
-                >
-                  {filter.label}
-                </option>
-              ))}
-            </select>
-            <select className="filter" name="price">
-              {priceFilters.map((filter) => (
-                <option
-                  key={filter.id}
-                  value={filter.value}
-                >
-                  {filter.label}
-                </option>
-              ))}
-            </select>
+
+        <section className="sectionContent">
+          <div className="desktopFilters">
+            <article className="desktopFilter">
+              <div className="filterName">
+                <span className="lato-bold">Price</span>
+                <img src="/icon-arrow-up.svg" alt="arrow up" />
+              </div>
+              <div className="filterValues">
+                {priceFilters.map((filter) => (
+                  <label htmlFor={filter.value}>
+                    {filter.label}
+                    {' '}
+                    {`(${filter.remaining})`}
+                    <input
+                      type="checkbox"
+                      id={filter.value}
+                      name={filter.value}
+                    />
+                    <span className="checkmark" />
+                  </label>
+                ))}
+              </div>
+              <p className="showMore">See More</p>
+            </article>
           </div>
-        </div>
-        <div className="products">
-          {products.map((product) => (
-            <ProductCard
-              id={product.id}
-              img={product.img}
-              name={product.name}
-              price={product.price}
-              coupon={product.coupon}
-              isDoorbuster={product.isDoorbuster}
-            />
-          ))}
-        </div>
+          <section className="productsContainer">
+            <div className="resultsFilters">
+              <p className="results">8 Matching results</p>
+              <div className="filters">
+                <select className="order" name="order">
+                  {orderFilters.map((filter) => (
+                    <option
+                      key={filter.id}
+                      value={filter.value}
+                    >
+                      {filter.label}
+                    </option>
+                  ))}
+                </select>
+                <select className="price" name="price">
+                  {priceFilters.map((filter) => (
+                    <option
+                      key={filter.id}
+                      value={filter.value}
+                    >
+                      {filter.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <article className="products">
+              {products.map((product) => (
+                <ProductCard
+                  id={product.id}
+                  img={product.img}
+                  name={product.name}
+                  price={product.price}
+                  coupon={product.coupon}
+                  isDoorbuster={product.isDoorbuster}
+                />
+              ))}
+            </article>
+          </section>
+        </section>
+
         <MerchBanner />
       </section>
     </main>

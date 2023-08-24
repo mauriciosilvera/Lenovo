@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <header className="header">
       <section className="top">
-        <img src="./lenovo.svg" alt="Lenovo logo" />
+        <img className="logo" src="./lenovo.svg" alt="Lenovo logo" />
         <ul className="topHeaderIcons">
           {topHeaderIcons.map((icon) => (
             <li key={icon.id}>

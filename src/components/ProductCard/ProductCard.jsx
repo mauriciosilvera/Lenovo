@@ -27,7 +27,7 @@ export default function ProductCard(props) {
           <span className="lato-bold">{coupon}</span>
         </p>
       </div>
-      <button className="addToCardButton" type="button">Add to Cart</button>
+      <button className="addToCartButton" type="button">Add to Cart</button>
     </article>
   );
 }

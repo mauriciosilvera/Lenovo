@@ -12,6 +12,10 @@ header {
     justify-content: space-between;
     height: 40px;
 
+    .logo {
+        cursor: pointer;
+    }
+
     .topHeaderIcons {
         display: flex;
         flex-wrap: wrap;
@@ -19,6 +23,7 @@ header {
         list-style: none;
         align-items: center;
         justify-content: space-around;
+        cursor: pointer;
     }
 
     .icon {
@@ -39,6 +44,7 @@ header {
         position: absolute;
         top: 40px;
         list-style: none;
+        cursor: pointer;
     
         .categorie {
             background-color: colors.$black;
@@ -79,6 +85,7 @@ header {
 
         .subcategorie {
             font-size: 13px;
+            cursor: pointer;
         }
     }
 }
