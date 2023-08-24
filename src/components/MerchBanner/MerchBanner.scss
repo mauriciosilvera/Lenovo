@@ -1,6 +1,6 @@
 @use '../../colors';
 
-.banner {
+.merchBanner {
     width: 100%;
     display: flex;
     align-items: center;
@@ -12,5 +12,13 @@
     p {
         font-size: .75rem;
         text-align: center;
+    }
+}
+
+@media (width >= 780px) {
+    .merchBanner{
+        p {
+            font-size: 1rem;
+        }
     }
 }

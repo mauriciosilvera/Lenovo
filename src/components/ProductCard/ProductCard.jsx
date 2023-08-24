@@ -3,11 +3,15 @@ import './ProductCard.scss';
 
 export default function ProductCard(props) {
   const {
-    img, name, price, coupon, isDoorbuster,
+    img, name, price, coupon, isDoorbuster, id,
   } = props;
   return (
-    <article className="cardContainer">
-
+    <article key={id} className="cardContainer">
+      <section className="labels">
+        <label className={`doorbuster lato-bold ${!isDoorbuster ? 'hidden' : ''} `}>
+          DOORBUSTER
+        </label>
+      </section>
       <img className="productImage" src={img} alt={name} />
 
       <div className="productInfo">

@@ -103,7 +103,7 @@ const bottomHeaderOptions = [
   },
 ];
 
-const categoriesOptions = [
+const sections = [
   {
     id: 1,
     text: 'Models',
@@ -198,19 +198,35 @@ const products = [
     name: 'ThinkPad X1 Carbon Gen 8',
     price: '$1,299.99',
     coupon: 'YOGAPRESALE8',
-    img: './notebook2.png',
+    img: './notebook1.png',
     isDoorbuster: false,
   },
   {
-    id: 3,
+    id: 4,
+    name: 'ThinkPad X1 Carbon Gen 8',
+    price: '$1,299.99',
+    coupon: 'YOGAPRESALE8',
+    img: './notebook2.png',
+    isDoorbuster: true,
+  },
+  {
+    id: 5,
     name: 'ThinkPad X1 Carbon Gen 8',
     price: '$1,299.99',
     coupon: 'YOGAPRESALE8',
     img: './notebook1.png',
+    isDoorbuster: false,
+  },
+  {
+    id: 6,
+    name: 'ThinkPad X1 Carbon Gen 8',
+    price: '$1,299.99',
+    coupon: 'YOGAPRESALE8',
+    img: './notebook2.png',
     isDoorbuster: true,
   },
 ];
 
 export {
-  topHeaderIcons, bottomHeaderOptions, categoriesOptions, middleHeaderOptions, orderFilters, priceFilters, products,
+  topHeaderIcons, bottomHeaderOptions, sections, middleHeaderOptions, orderFilters, priceFilters, products,
 };

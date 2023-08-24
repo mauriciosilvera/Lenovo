@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import Header from './components/Header/Header';
 import DiscountsBanner from './components/DiscountsBanner/DiscountsBanner';
-// import Categories from './components/Categories/Categories';
+import Categories from './components/Sections/Sections';
 import ProductCard from './components/ProductCard/ProductCard';
 import MerchBanner from './components/MerchBanner/MerchBanner';
 import { orderFilters, priceFilters, products } from './constants/constants';
@@ -12,21 +12,32 @@ function App() {
     <main>
       <Header />
       <DiscountsBanner />
-      {/* <Categories /> */}
+      <Categories />
       <section className="pageContent">
-        <p className="categorie">Models</p>
+        <div className="categorieName">
+          <span>Models</span>
+        </div>
         <div className="resultsFilters">
-          <span className="results">8 Matching results</span>
+          <p className="results">8 Matching results</p>
           <div className="filters">
             <select className="filter" name="order">
               {orderFilters.map((filter) => (
-                <option value={filter.value}>{filter.label}</option>
+                <option
+                  key={filter.id}
+                  value={filter.value}
+                >
+                  {filter.label}
+                </option>
               ))}
             </select>
-
             <select className="filter" name="price">
               {priceFilters.map((filter) => (
-                <option value={filter.value}>{filter.label}</option>
+                <option
+                  key={filter.id}
+                  value={filter.value}
+                >
+                  {filter.label}
+                </option>
               ))}
             </select>
           </div>
@@ -34,6 +45,7 @@ function App() {
         <div className="products">
           {products.map((product) => (
             <ProductCard
+              id={product.id}
               img={product.img}
               name={product.name}
               price={product.price}

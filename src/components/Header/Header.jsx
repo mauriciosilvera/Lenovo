@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './Header.scss';
-import { topHeaderIcons, middleHeaderOptions } from '../../constants/constants';
+import { topHeaderIcons, middleHeaderOptions, bottomHeaderOptions } from '../../constants/constants';
 import SearchBar from '../SearchBar/SearchBar';
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
-  const handleOpenCloseMenu = () => {
+  const handleOpenCloseCategories = () => {
     setIsOpen((prevValue) => !prevValue);
   };
 
@@ -22,11 +22,16 @@ export default function Header() {
           ))}
         </ul>
       </section>
-      <section className="burgerAndSearch">
+      <section className="middle">
+        <ul className={`categories ${isOpen ? '' : 'hidden'}`}>
+          {middleHeaderOptions.map((opt) => (
+            <li className="categorie lato-bold" key={opt.id}>{opt.text}</li>
+          ))}
+        </ul>
         <button
           type="button"
-          onClick={handleOpenCloseMenu}
-          onKeyDown={handleOpenCloseMenu}
+          onClick={handleOpenCloseCategories}
+          onKeyDown={handleOpenCloseCategories}
         >
           <img
             className="burgerIcon"
@@ -34,21 +39,21 @@ export default function Header() {
             alt="menu"
           />
         </button>
+
         <SearchBar />
       </section>
-      <ul className={`burgerOptions ${isOpen ? '' : 'hidden'}`}>
+      {/* <ul className={`categories ${isOpen ? '' : 'hidden'}`}>
         {middleHeaderOptions.map((opt) => (
-          <li className="option lato-bold" key={opt.id}>{opt.text}</li>
+          <li className="categorie lato-bold" key={opt.id}>{opt.text}</li>
         ))}
-      </ul>
-      {/* <section className="bottom">
-        <ul className="subsections">
+      </ul> */}
+      <section className="bottom">
+        <ul className="subcategories">
           {bottomHeaderOptions.map((opt) => (
-            <li key={opt.id} className="subsection">{opt.text}</li>
+            <li key={opt.id} className="subcategorie">{opt.text}</li>
           ))}
         </ul>
-      </section> */}
-
+      </section>
     </header>
   );
 }

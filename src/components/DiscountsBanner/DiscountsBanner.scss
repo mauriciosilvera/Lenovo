@@ -13,4 +13,17 @@
         font-size: .75rem;
         text-align: center;
     }
+
+    .shopNow{
+        text-decoration: underline;
+        margin-left: 1rem;
+    }
+}
+
+@media (width >= 780px) {
+    .discountsBanner{
+        p {
+            font-size: 1rem;
+        }
+    }
 }

@@ -1,37 +1,55 @@
 @use '../../colors';
 
 .cardContainer {
-    width: 45%;
+    width: 85%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     border: 1px solid colors.$gray;
     border-radius: .25rem;
     margin-bottom: .5rem;
-    justify-content: center;
     padding: .5rem;
-}
 
-.productInfo { 
-    width: 95%;
-}
+    .labels {
+        width: 100%;
 
-.productImage {
-    width: 90%;
-    text-align: center;
-}
+        .doorbuster {
+            width: 140px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: .125rem;
+            color: colors.$white;
+            background-color: colors.$red;
+            margin-bottom: 1rem;
+        }
+    }
+    
+    .productInfo { 
+        width: 95%;
 
-.productTitle {
-    color: colors.$blue;
-    margin-bottom: 2rem;
-}
+        .productTitle {
+            color: colors.$blue;
+            margin-bottom: 2rem;
+        }
+        
+        .productPrice {
+            font-size: 26px;
+        }
+        
+        .coupon {
+            font-size: .75rem;
+        }
+    }
 
-.productPrice {
-    font-size: 26px;
-}
-
-.coupon {
-    font-size: .75rem;
+    .productImage {
+        width: 100%;
+        aspect-ratio: 4/3;
+        text-align: center;
+        margin-bottom: .25rem;
+    }
 }
 
 .addToCardButton {
@@ -42,4 +60,10 @@
     background-color: colors.$blue;
     color: colors.$white;
     border: 0;
+}
+
+@media (width >= 780px) {
+    .cardContainer {
+        width: 90%;
+    }
 }

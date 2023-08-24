@@ -3,7 +3,7 @@ import './MerchBanner.scss';
 
 export default function MerchBanner() {
   return (
-    <section className="banner">
+    <section className="merchBanner">
       <p>OPTIONAL MERCHANDISING BANNER THAT GOES BELOW MODELS SECTION.</p>
     </section>
   );
