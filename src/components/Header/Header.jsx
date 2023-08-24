@@ -42,15 +42,15 @@ export default function Header() {
 
         <SearchBar />
       </section>
-      {/* <ul className={`categories ${isOpen ? '' : 'hidden'}`}>
-        {middleHeaderOptions.map((opt) => (
-          <li className="categorie lato-bold" key={opt.id}>{opt.text}</li>
-        ))}
-      </ul> */}
       <section className="bottom">
         <ul className="subcategories">
           {bottomHeaderOptions.map((opt) => (
-            <li key={opt.id} className="subcategorie">{opt.text}</li>
+            <li
+              key={opt.id}
+              className={`subcategorie ${opt.text === 'Sale' ? 'sale' : ''}`}
+            >
+              {opt.text}
+            </li>
           ))}
         </ul>
       </section>
