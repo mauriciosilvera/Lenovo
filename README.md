@@ -11,6 +11,7 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 - npm
+
   ```sh
   npm install npm@latest -g
   ```
@@ -18,18 +19,25 @@ To get a local copy up and running follow these simple example steps.
 ### Installation
 
 1. Clone the repo
+
    ```sh
    git clone https://github.com/mauriciosilvera/Lenovo
    ```
+
 2. Install NPM packages
+
    ```sh
    npm i
    ```
+
 3. Run local Vite server
+
    ```sh
    npm run dev
    ```
+
 4. Ready! Now open the project in your favourite browser
+
    ```sh
    http://127.0.0.1:5173
    ```
