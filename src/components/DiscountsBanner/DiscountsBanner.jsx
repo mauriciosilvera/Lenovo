@@ -11,11 +11,10 @@ export default function DiscountsBanner() {
         {' '}
         THROUGH NOVEMBER 11TH
         {' '}
-      </p>
-      <p className="shopNow lato-bold">
-        Shop Now
-        {' '}
-        {'>'}
+        <span className="shopNow lato-bold">
+          Shop Now
+        </span>
+        {' >'}
       </p>
     </section>
   );

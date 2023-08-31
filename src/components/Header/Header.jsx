@@ -22,6 +22,7 @@ export default function Header() {
           ))}
         </ul>
       </section>
+
       <section className="middle">
         <ul className={`categories ${isOpen ? '' : 'hidden'}`}>
           {middleHeaderOptions.map((opt) => (
@@ -39,9 +40,9 @@ export default function Header() {
             alt="menu"
           />
         </button>
-
         <SearchBar />
       </section>
+
       <section className="bottom">
         <ul className="subcategories">
           {bottomHeaderOptions.map((opt) => (

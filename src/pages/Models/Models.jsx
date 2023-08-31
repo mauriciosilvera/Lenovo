@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductCard from '../../components/ProductCard/ProductCard';
-import MerchBanner from '../../components/DiscountsBanner/DiscountsBanner';
+import MerchBanner from '../../components/MerchBanner/MerchBanner';
 import { orderFilters, priceFilters, products } from '../../constants/constants';
 import './Models.scss';
 import CheckboxFilter from '../../components/CheckboxFilter/CheckboxFilter';
